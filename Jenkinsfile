@@ -12,4 +12,15 @@ pipeline{
             }
         }
     }
+    post{
+        always{
+            bat 'echo "This will always run"'
+        }
+        success{
+            bat 'echo "Build Succeeded"'
+        }
+        failure{
+            bat 'echo "Build Failed"'
+        }
+    }
 }
